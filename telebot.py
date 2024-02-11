@@ -6,7 +6,11 @@ import requests
 
 from datetime import datetime
 
-BOT_TOKEN = "6033739395:AAH93N_x77lnpK4drO8UH-NopBGfH0n4Zl0"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
